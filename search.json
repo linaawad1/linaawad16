@@ -63,20 +63,6 @@
     "text": "You can create content with Jupyter notebooks.\n\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\nBelow we’ll display a map using folium. When your book is built, the code for creating the interactive map is retained.\n\nimport folium\nm = folium.Map(\n    location=[45.372, -121.6972],\n    zoom_start=12,\n    tiles='Stamen Terrain'\n)\n\nfolium.Marker(\n    location=[45.3288, -121.6625],\n    popup='Mt. Hood Meadows',\n    icon=folium.Icon(icon='cloud')\n).add_to(m)\n\nfolium.Marker(\n    location=[45.3311, -121.7113],\n    popup='Timberline Lodge',\n    icon=folium.Icon(color='green')\n).add_to(m)\n\nfolium.Marker(\n    location=[45.3300, -121.6823],\n    popup='Some Other Location',\n    icon=folium.Icon(color='red', icon='info-sign')\n).add_to(m)\n\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
   },
   {
-    "objectID": "content/add-content.html",
-    "href": "content/add-content.html",
-    "title": "Customize",
-    "section": "",
-    "text": "Edit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\n---\ntitle: your title\n---\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\n---\ntitle: your title\n---\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation)."
-  },
-  {
-    "objectID": "content/add-content.html#add-your-pages-the-project",
-    "href": "content/add-content.html#add-your-pages-the-project",
-    "title": "Customize",
-    "section": "Add your pages the project",
-    "text": "Add your pages the project\n\nAdd the files to _quarto.yml"
-  },
-  {
     "objectID": "content/customizing.html",
     "href": "content/customizing.html",
     "title": "Customization",
@@ -124,6 +110,13 @@
     "title": "Acknowledgments",
     "section": "",
     "text": "This repo and GitHub Action was based on the tutorial by Openscapes quarto-website-tutorial by Julia Lowndes and Stefanie Butland."
+  },
+  {
+    "objectID": "content/my-grades.html",
+    "href": "content/my-grades.html",
+    "title": "Grades and Reflection",
+    "section": "",
+    "text": "3.1 and 3.2\nThis was our group so we presented and we were the ones grading.\n\n\n3.3 and 3.4\n\n0.95/1\nComments: ” This person took all the notes and had answers with explanations”\nReflection: I think that I got a 0.95/1 because I gave a lot of effort. When they were explaining I took notes to make sure i understood the lesson when I did the hacks. I also went into more detail after I answered because I would struggle and needed it to explain it to myself. I wrote learning lessons after each problem and my overall thoughts and reflection.\n\n\n\n3.5 - 3.7"
   },
   {
     "objectID": "index.html",
